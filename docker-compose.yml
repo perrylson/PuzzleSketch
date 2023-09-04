@@ -5,17 +5,17 @@ services:
     container_name: go-api
     ports:
       - "8080:8080"
+    restart: on-failure
     depends_on:
-      - "sql-db"
+      - sql-db
 
   sql-db:
     image: mysql:latest
     container_name: sql-db
-    restart: unless-stopped
     environment:
       MYSQL_USER: user
       MYSQL_PASSWORD: setABetterPassword
-      MYSQL_DATABASE: userdb
+      MYSQL_DATABASE: logdb
     volumes:
       - sql-db:/var/lib/mysql
 
