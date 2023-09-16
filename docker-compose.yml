@@ -14,6 +14,7 @@ services:
     container_name: sql-db
     environment:
       MYSQL_USER: user
+      MYSQL_ROOT_PASSWORD: setABetterPassword
       MYSQL_PASSWORD: setABetterPassword
       MYSQL_DATABASE: logdb
     volumes:
