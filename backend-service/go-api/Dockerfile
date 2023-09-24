@@ -1,5 +1,3 @@
-# Docker file for creating image of Go REST service
-
 FROM golang:latest
 
 WORKDIR /go-api
