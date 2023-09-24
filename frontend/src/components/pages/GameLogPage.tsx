@@ -52,7 +52,7 @@ export function GameLogPage({ onClick }: GameLogPageProps) {
     }),
     columnHelper.accessor("isWin", {
       header: "Win/Loss",
-      cell: (info) => (info.getValue() == 1 ? "Win" : "Loss"),
+      cell: (info) => (info.getValue() === 1 ? "Win" : "Loss"),
       footer: (info) => info.column.id,
     }),
   ]

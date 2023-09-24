@@ -144,7 +144,7 @@ export function GameSection({
       if (canvas2) {
         const x = e.clientX - canvas2.getBoundingClientRect().x
         const y = e.clientY - canvas2.getBoundingClientRect().y
-        if (selectedTileRef.current.actualPosition != -1) {
+        if (selectedTileRef.current.actualPosition !== -1) {
           for (
             let i = 0;
             i < playerPuzzlePieceBoardArrayRef.current.length;
@@ -162,7 +162,7 @@ export function GameSection({
             ) {
               if (!playerPuzzlePieceBoardArray[i].visible) {
                 if (
-                  selectedTileRef.current.actualPosition ==
+                  selectedTileRef.current.actualPosition ===
                   playerPuzzlePieceBoardArrayRef.current[i].index
                 ) {
                   playerPuzzlePieceBoardArray[i].visible = true
@@ -241,7 +241,7 @@ export function GameSection({
           } else {
             ctx?.clearRect(dx, dy, puzzleTileLength, puzzleTileWidth)
           }
-          if (selectedTileRef.current.boardPosition == i) {
+          if (selectedTileRef.current.boardPosition === i) {
             if (ctx) {
               ctx.globalAlpha = 0.5
               ctx.fillStyle = "red"

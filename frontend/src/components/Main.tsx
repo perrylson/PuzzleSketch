@@ -12,7 +12,7 @@ export function Main() {
   const [username, setUserName] = useState<string>("")
   const [page, setPage] = useState<string>("start")
   const checkUsername = (name: string) => {
-    if (name != "") {
+    if (name !== "") {
       setUserName(name)
       setPage("game")
     }

@@ -46,7 +46,7 @@ describe("Game Log", () => {
 
     expect(screen.getByText(mockData[0].username)).toBeInTheDocument()
     expect(
-      screen.getByText(mockData[0].isWin == 0 ? "Loss" : "Win")
+      screen.getByText(mockData[0].isWin === 0 ? "Loss" : "Win")
     ).toBeInTheDocument()
   })
 
