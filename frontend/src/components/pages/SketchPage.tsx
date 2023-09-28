@@ -31,10 +31,13 @@ export function SketchPage({
   const puzzleCanvasLength = 300
   const puzzleCanvasWidth = 300
 
-  const tileDifficulty: Record<string, { length: number; width: number }> = {
-    easy: { length: 150, width: 150 },
-    medium: { length: 75, width: 75 },
-    hard: { length: 30, width: 30 },
+  const tileDifficulty: Record<
+    string,
+    { length: number; width: number; heartAmount: number }
+  > = {
+    easy: { length: 150, width: 150, heartAmount: 2 },
+    medium: { length: 75, width: 75, heartAmount: 3 },
+    hard: { length: 30, width: 30, heartAmount: 10 },
   }
 
   const [difficulty, setDifficulty] = useState("medium")
@@ -63,6 +66,7 @@ export function SketchPage({
 
   const puzzleTileWidth = tileDifficulty[difficulty].width
   const puzzleTileLength = tileDifficulty[difficulty].length
+  const heartAmount = tileDifficulty[difficulty].heartAmount
   const puzzleCanvasWidthSectionsAmount = puzzleCanvasWidth / puzzleTileWidth
   const puzzleCanvasLengthSectionsAmount = puzzleCanvasLength / puzzleTileLength
 
@@ -151,6 +155,7 @@ export function SketchPage({
           puzzleCanvasWidth={puzzleCanvasWidth}
           onClick={onClick}
           gameEnd={gameEnd}
+          heartAmount={heartAmount}
         />
       ) : (
         <SketchSection

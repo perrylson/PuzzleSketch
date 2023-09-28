@@ -20,7 +20,7 @@ export function HealthController({
   }
 
   return (
-    <div className="flex gap-5">
+    <div className={maxPlayerHealth > 4 ? "grid grid-cols-5" : "flex gap-5"}>
       {healthArray.map((healthPiece) => (
         <FavoriteIcon
           key={healthPiece.position}

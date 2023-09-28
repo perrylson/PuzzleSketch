@@ -18,6 +18,7 @@ type GameSectionProps = {
   gameEnd?: {
     status: "win" | "loss"
   }
+  heartAmount: number
 }
 
 type Tile = {
@@ -39,10 +40,11 @@ export function GameSection({
   onClick,
   imageData,
   gameEnd,
+  heartAmount,
 }: GameSectionProps) {
   const [isGameFinished, setIsGameFinished] = useState(false)
   const [gameResult, setGameResult] = useState("loss")
-  const maxPlayerHealth = 3
+  const maxPlayerHealth = heartAmount
   const [currentPlayerHealth, setCurrentPlayerHealth] =
     useState(maxPlayerHealth)
   const [puzzleTileAmount, setPuzzleTileAmount] = useState(
@@ -358,7 +360,7 @@ export function GameSection({
             alt="puzzle-image"
           ></img>
         </div>
-        <div className="pr-5">
+        <div>
           <HealthController
             maxPlayerHealth={maxPlayerHealth}
             currentPlayerHealth={currentPlayerHealth}
