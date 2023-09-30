@@ -1,6 +1,6 @@
 # Puzzle Sketch
 
-Puzzle Sketch is a game where users can design puzzles with a drawing canvas. After finishing their sketches, users can attempt to solve their own puzzles. Players start each game with a certain amount of hearts. Placing a tile in the wrong spot will deduct one heart. However, placing a tile in the correct spot will restore one heart. Puzzle Sketch saves each win/loss to a game log database. Users can access this database and view their gameplay history.
+Puzzle Sketch is a game where users can design puzzles with a drawing canvas. After finishing their sketches, users can attempt to solve their own puzzles. Players start each game with a certain amount of hearts. Placing a tile in the wrong spot will deduct one heart. However, placing a tile in the correct spot will restore one heart. Puzzle Sketch saves each win/loss to a game log database. Users can view their gameplay history.
 
 This project employs a Go REST API, MySQL database, and React TypeScript UI. It uses Docker to bundle the respective images into a multi-container application. Regarding the full-stack aspect, the REST API supports data interactions between the MySQL database and the web app.
 

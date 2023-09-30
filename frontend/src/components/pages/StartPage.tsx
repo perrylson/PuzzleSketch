@@ -40,10 +40,11 @@ export function StartPage({ usernameHandler, setPage }: StartPageProps) {
               color="teal"
               size="sm"
               onClick={() => {
-                if (usernameText === "") {
+                const trimmedText = usernameText.trim()
+                if (trimmedText === "" && trimmedText.length === 0) {
                   setUsernameError(true)
                 } else {
-                  usernameHandler(usernameText)
+                  usernameHandler(trimmedText)
                   setUsernameError(false)
                 }
               }}
