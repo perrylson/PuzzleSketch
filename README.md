@@ -4,7 +4,7 @@ Puzzle Sketch is a game where users can design puzzles with a drawing canvas. Af
 
 This project employs a Go REST API, MySQL database, and React TypeScript UI. It uses Docker to bundle the respective images into a multi-container application. Regarding the full-stack aspect, the REST API supports data interactions between the MySQL database and the web app.
 
-For frontend testing, the project deployed a continuous integration workflow with Github Actions and Jest. This process verifies the UI components' functionalities with a series of Jest unit tests. It runs when developers create pull requests or push commits to the main branch.
+For frontend testing, the project deployed a continuous integration workflow with Github Actions and Jest. This process verifies the UI components' functionalities with a series of Jest unit tests. The workflow's event triggers are commits and pull requests that target the main branch.
 
 ## Gallery
 
