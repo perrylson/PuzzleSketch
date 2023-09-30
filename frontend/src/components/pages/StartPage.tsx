@@ -41,7 +41,7 @@ export function StartPage({ usernameHandler, setPage }: StartPageProps) {
               size="sm"
               onClick={() => {
                 const trimmedText = usernameText.trim()
-                if (trimmedText === "" && trimmedText.length === 0) {
+                if (trimmedText.length === 0) {
                   setUsernameError(true)
                 } else {
                   usernameHandler(trimmedText)
